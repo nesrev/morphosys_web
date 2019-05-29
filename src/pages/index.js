@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ImageTech from "../components/image-tech"
 
 import "../components/layout.css"
 
@@ -13,50 +14,181 @@ import {
   Grid,
   Button,
   Divider,
-  Icon
+  Icon,
+  Responsive
 
 } from 'semantic-ui-react'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Inicio" />
-    <Segment
+    {/* Responsive to Mobile */}
+    <Responsive as={Segment}
+      minWidth={320}
+      maxWidth={529}
       style={{
         margin:"0em",
         padding:"0em"
       }}
     >
       <Container
-        className="techimg"
         textAlign='center'
         fluid
       >
+        <ImageTech/>
         <Header
           as='h1'
-          content='Imagine-a-Company'
+          content='Imagina todo lo que podemos hacer por ti'
           inverted
           style={{
-            marginTop:'3em',
-            fontSize:'4em',
-            fontWeight: 'normal',
-            marginBottom: 0,
+            top:'20%',
+            marginBottom: '2em',
+            fontSize: "1em",
+            left: "50%",
+            position:"absolute",
+            transform: "translate(-50%, -50%)",
+            padding: "1em"
           }}
         />
-        <Header
-          as='h2'
-          content='Do whatever you want when you want to.'
-          inverted
-          style={{
-            fontSize:'1.7em',
-            fontWeight: 'normal',
-          }}
-        />
-        <Button primary size='huge'>
+        <Button primary size='small' style={{
+          top:'80%',
+          left: "50%",
+          fontWeight: 'normal',
+          position:"absolute",
+          transform: "translate(-50%, -50%)"
+        }}
+        >
           Get Started
           <Icon name='right arrow' />
         </Button>
       </Container>
-    </Segment>
+    </Responsive>
+    {/* Responsive to Tablet */}
+    <Responsive as={Segment}
+      minWidth={530}
+      maxWidth={859}
+      style={{
+        margin:"0em",
+        padding:"0em"
+      }}
+    >
+      <Container
+        textAlign='center'
+        fluid
+      >
+        <ImageTech/>
+        <Header
+          as='h1'
+          content='Imagina todo lo que podemos hacer por ti'
+          inverted
+          style={{
+            top:'20%',
+            marginBottom: '2em',
+            fontSize: "2em",
+            left: "50%",
+            position:"absolute",
+            transform: "translate(-50%, -50%)",
+            padding: "1em"
+          }}
+        />
+        <Button primary size='small' style={{
+          top:'80%',
+          left: "50%",
+          fontWeight: 'normal',
+          position:"absolute",
+          transform: "translate(-50%, -50%)"
+        }}
+        >
+          Get Started
+          <Icon name='right arrow' />
+        </Button>
+      </Container>
+    </Responsive>
+    {/*Responsive on Normal Desktop*/}
+    <Responsive as={Segment}
+      minWidth={860}
+      maxWidth={1250}
+      style={{
+        margin:"0em",
+        padding:"0em"
+      }}
+    >
+      <Container
+        textAlign='center'
+        fluid
+      >
+        <ImageTech/>
+        <Header
+          as='h1'
+          content='Imagina todo lo que podemos hacer por ti'
+          inverted
+          style={{
+            top:'20%',
+            marginBottom: '2em',
+            left: "50%",
+            position:"absolute",
+            fontSize: "3em",
+            transform: "translate(-50%, -50%)",
+            padding: "1em"
+          }}
+        />
+        <Button primary size='big' style={{
+          top:'75%',
+          left: "50%",
+          fontWeight: 'normal',
+          fontSize: "2em",
+          position:"absolute",
+          transform: "translate(-50%, -50%)"
+        }}
+        >
+          Get Started
+          <Icon name='right arrow' />
+        </Button>
+      </Container>
+    </Responsive>
+    {/* Responsive to Big Scream */}
+    <Responsive as={Segment}
+      minWidth={1251}
+      maxWidth={2000}
+      style={{
+        margin:"0em",
+        padding:"0em"
+      }}
+    >
+      <Container
+        textAlign='center'
+        fluid
+      >
+        <ImageTech/>
+        <Header
+          as='h1'
+          content='Imagina todo lo que podemos hacer por ti'
+          inverted
+          size="huge"
+          style={{
+            top:'20%',
+            marginBottom: '2em',
+            fontSize: "5em",
+            left: "50%",
+            position:"absolute",
+            transform: "translate(-50%, -50%)",
+            padding: "1em"
+          }}
+        />
+        <Button primary size='huge' style={{
+          top:'75%',
+          left: "50%",
+          fontWeight: 'normal',
+          fontSize: "2em",
+          position:"absolute",
+          transform: "translate(-50%, -50%)"
+        }}
+        >
+          Get Started
+          <Icon name='right arrow' />
+        </Button>
+      </Container>
+    </Responsive>
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
