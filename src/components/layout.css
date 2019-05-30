@@ -1,5 +1,4 @@
 .techimg {
-  background-image: url("../images/tech-img.jpg");
-  padding-top: 7em;
-  padding-bottom: 8em;
+  background: #333333 url(../images/tech-img.jpg) no-repeat 100% 50% / cover;
+  background-color: transparent;
 }

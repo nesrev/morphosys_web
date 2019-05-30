@@ -42,7 +42,7 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
           <div>
             <main>
-              <Container fluid style={{ marginTop: '5em' }}>
+              <Container fluid style={{ marginTop: '3.9em' }}>
                 {children}
               </Container>
             </main>
